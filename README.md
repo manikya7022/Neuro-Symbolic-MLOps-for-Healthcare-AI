@@ -185,9 +185,7 @@ Statistical tracking of constraint violations over time for CI/CD gates:
 | `/health` | GET | Health check |
 | `/metrics` | GET | Prometheus metrics |
 
-## ⚠️ Disclaimer
 
-> **This is a research/demo system.** It is NOT intended for actual medical decision-making. Real medical AI requires FDA approval, extensive clinical validation, and regulatory compliance beyond this scope. Always consult healthcare professionals for medical advice.
 
 ## 🛠️ Configuration
 
