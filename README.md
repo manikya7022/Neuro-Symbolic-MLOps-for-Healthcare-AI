@@ -3,7 +3,6 @@
 A **production-ready hybrid reasoning system** that combines neural LLMs with symbolic solvers for healthcare compliance checking with real-time adaptive routing.
 
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Status: Research](https://img.shields.io/badge/Status-Research-orange.svg)
 
 ## 🎯 Overview
@@ -217,6 +216,6 @@ verification:
 - [API Reference](http://localhost:8000/docs)
 - [Architecture Deep Dive](./docs/architecture.md)
 
-## 📄 License
+
 
 MIT License - see [LICENSE](LICENSE) for details.
