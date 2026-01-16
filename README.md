@@ -216,12 +216,3 @@ verification:
     alert_threshold: 0.05  # 5% violation rate
 ```
 
-## 📚 Further Reading
-
-- [Implementation Plan](./docs/implementation_plan.md)
-- [API Reference](http://localhost:8000/docs)
-- [Architecture Deep Dive](./docs/architecture.md)
-
-
-
-MIT License - see [LICENSE](LICENSE) for details.
