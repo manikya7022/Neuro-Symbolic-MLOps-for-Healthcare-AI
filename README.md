@@ -23,7 +23,7 @@ Modern healthcare AI faces a critical dilemma: **Large Language Models offer unp
 
 This project bridges that gap by creating a **hybrid architecture where neural and symbolic systems complement each other in real-time**. When an LLM is confident and the query is low-risk, it responds directly. When uncertainty is high or the query involves drug interactions, dosages, or contraindications, symbolic verification kicks in—checking formal constraints before any response reaches the patient. The result is an AI system that combines the *accessibility* of conversational AI with the *safety guarantees* of formal medical knowledge bases.
 
-For healthcare organizations, researchers, and developers, this represents a paradigm shift: **you no longer have to choose between flexibility and safety.** The system adapts dynamically, routing simple educational queries through fast neural paths while escalating safety-critical decisions to verified symbolic reasoning. With integrated drift detection, you can monitor in production when your LLM starts violating medical constraints—catching model degradation before it impacts patients. This is not just an AI assistant; it's a framework for **trustworthy, auditable, and deployable healthcare AI**.
+For healthcare organizations, researchers, and developers, this represents a paradigm shift: **you no longer have to choose between flexibility and safety.** The system adapts dynamically, routing simple educational queries through fast neural paths while escalating safety-critical decisions to verified symbolic reasoning. With integrated drift detection, you can monitor in production when your LLM starts violating medical constraints—catching model degradation before it impacts patients**.
 
 ## 🏗️ Architecture
 
