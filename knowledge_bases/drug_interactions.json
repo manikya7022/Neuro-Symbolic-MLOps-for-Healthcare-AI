@@ -1,0 +1,115 @@
+{
+    "version": "1.0",
+    "last_updated": "2025-01-15",
+    "source": "Clinical pharmacology references",
+    "interactions": [
+        {
+            "drug_a": "warfarin",
+            "drug_b": "aspirin",
+            "severity": "major",
+            "mechanism": "Both affect hemostasis through different mechanisms; aspirin inhibits platelet aggregation while warfarin inhibits clotting factors",
+            "clinical_effect": "Significantly increased risk of bleeding, including potentially fatal hemorrhage",
+            "management": "Avoid combination if possible. If both required, use lowest aspirin dose (81mg) and monitor INR closely",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "warfarin",
+            "drug_b": "ibuprofen",
+            "severity": "major",
+            "mechanism": "NSAIDs inhibit platelet function and may displace warfarin from protein binding sites",
+            "clinical_effect": "Increased bleeding risk and potential for serious GI hemorrhage",
+            "management": "Avoid NSAIDs with warfarin. Use acetaminophen for pain if needed",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "warfarin",
+            "drug_b": "naproxen",
+            "severity": "major",
+            "mechanism": "NSAIDs inhibit platelet function and may displace warfarin from protein binding",
+            "clinical_effect": "Increased bleeding risk and potential for serious GI hemorrhage",
+            "management": "Avoid combination. Consider acetaminophen or topical analgesics",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "lisinopril",
+            "drug_b": "potassium",
+            "severity": "moderate",
+            "mechanism": "ACE inhibitors reduce aldosterone secretion, decreasing potassium excretion",
+            "clinical_effect": "Risk of hyperkalemia with cardiac arrhythmia potential",
+            "management": "Monitor potassium levels regularly; avoid potassium supplements unless hypokalemic",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "lisinopril",
+            "drug_b": "spironolactone",
+            "severity": "moderate",
+            "mechanism": "Both drugs can increase potassium levels through different mechanisms",
+            "clinical_effect": "Significant risk of hyperkalemia",
+            "management": "Monitor potassium closely if combination necessary; consider dose adjustments",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "metformin",
+            "drug_b": "alcohol",
+            "severity": "moderate",
+            "mechanism": "Both can contribute to lactic acidosis; alcohol impairs gluconeogenesis",
+            "clinical_effect": "Increased risk of lactic acidosis and hypoglycemia",
+            "management": "Limit alcohol consumption; avoid binge drinking",
+            "evidence_level": "moderate"
+        },
+        {
+            "drug_a": "atorvastatin",
+            "drug_b": "gemfibrozil",
+            "severity": "major",
+            "mechanism": "Gemfibrozil inhibits glucuronidation and OATP1B1 transport of statins",
+            "clinical_effect": "Significantly increased risk of myopathy and rhabdomyolysis",
+            "management": "Avoid combination. If fibrate needed, use fenofibrate instead",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "atorvastatin",
+            "drug_b": "clarithromycin",
+            "severity": "major",
+            "mechanism": "Clarithromycin is a strong CYP3A4 inhibitor, increasing statin levels",
+            "clinical_effect": "Increased risk of myopathy and rhabdomyolysis",
+            "management": "Use azithromycin instead; if clarithromycin necessary, hold or reduce statin dose",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "omeprazole",
+            "drug_b": "clopidogrel",
+            "severity": "major",
+            "mechanism": "Omeprazole inhibits CYP2C19, reducing conversion of clopidogrel to active metabolite",
+            "clinical_effect": "Reduced antiplatelet effect with increased cardiovascular event risk",
+            "management": "Use pantoprazole or H2 blocker instead of omeprazole",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "amoxicillin",
+            "drug_b": "methotrexate",
+            "severity": "moderate",
+            "mechanism": "Decreased renal clearance of methotrexate by penicillins",
+            "clinical_effect": "Increased methotrexate toxicity risk",
+            "management": "Monitor for methotrexate toxicity; consider alternative antibiotic",
+            "evidence_level": "moderate"
+        },
+        {
+            "drug_a": "fluoxetine",
+            "drug_b": "tramadol",
+            "severity": "major",
+            "mechanism": "Both increase serotonin levels; fluoxetine inhibits tramadol metabolism",
+            "clinical_effect": "Risk of serotonin syndrome and seizures",
+            "management": "Avoid combination if possible; use alternative analgesic",
+            "evidence_level": "high"
+        },
+        {
+            "drug_a": "ciprofloxacin",
+            "drug_b": "theophylline",
+            "severity": "major",
+            "mechanism": "Ciprofloxacin inhibits CYP1A2 metabolism of theophylline",
+            "clinical_effect": "Increased theophylline levels with seizure and arrhythmia risk",
+            "management": "Monitor theophylline levels; reduce dose by 30-50% or use alternative antibiotic",
+            "evidence_level": "high"
+        }
+    ]
+}

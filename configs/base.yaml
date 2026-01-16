@@ -1,0 +1,157 @@
+# Neuro-Symbolic Healthcare System Configuration
+
+# Application Settings
+app:
+  name: "Neuro-Symbolic Healthcare AI"
+  version: "0.1.0"
+  debug: false
+  log_level: "INFO"
+
+# API Settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://localhost:8080"
+  rate_limit:
+    requests_per_minute: 60
+    burst_size: 10
+
+# Neural Configuration
+neural:
+  ollama:
+    host: "http://localhost:11434"
+    model: "llama3.2:3b"
+    fallback_model: "mistral:7b"
+    timeout: 60
+    max_retries: 3
+    temperature: 0.7
+    max_tokens: 2048
+  
+  embeddings:
+    model: "all-MiniLM-L6-v2"
+    cache_size: 10000
+    batch_size: 32
+  
+  uncertainty:
+    method: "token_entropy"  # token_entropy, semantic_consistency, conformal
+    threshold: 0.7  # Trigger symbolic fallback if confidence < threshold
+    mc_samples: 5  # For MC Dropout
+    conformal_alpha: 0.1  # For conformal prediction
+
+# Symbolic Configuration
+symbolic:
+  z3:
+    timeout: 30000  # milliseconds
+    max_memory: 4096  # MB
+  
+  knowledge_base:
+    path: "knowledge_bases/medical_ontology.owl"
+    cache_enabled: true
+    reasoning_enabled: true
+  
+  rules:
+    drug_interactions: "knowledge_bases/drug_interactions.json"
+    clinical_guidelines: "knowledge_bases/clinical_guidelines.json"
+    safety_protocols: "knowledge_bases/safety_protocols.json"
+
+# Router Configuration
+router:
+  strategy: "adaptive"  # adaptive, neural_first, symbolic_first, hybrid
+  
+  complexity:
+    low_threshold: 0.3
+    high_threshold: 0.7
+    embedding_weight: 0.6
+    heuristic_weight: 0.4
+  
+  latency:
+    default_budget_ms: 5000
+    neural_overhead_ms: 500
+    symbolic_overhead_ms: 200
+    streaming_enabled: true
+  
+  safety:
+    critical_keywords:
+      - "medication"
+      - "drug"
+      - "dosage"
+      - "allergy"
+      - "interaction"
+      - "contraindication"
+      - "side effect"
+      - "overdose"
+      - "pregnancy"
+      - "pediatric"
+    always_verify: true
+
+# Verification Configuration
+verification:
+  contracts:
+    enabled: true
+    strict_mode: false  # Fail on any violation
+    log_violations: true
+  
+  streaming:
+    enabled: true
+    check_interval_tokens: 50
+    buffer_size: 1000
+  
+  drift_detection:
+    enabled: true
+    window_size: 1000
+    alert_threshold: 0.05  # 5% violation rate
+    metrics_interval: 60  # seconds
+
+# MLOps Configuration
+mlops:
+  mlflow:
+    tracking_uri: "http://localhost:5000"
+    experiment_name: "neuro-symbolic-healthcare"
+    auto_log: true
+  
+  versioning:
+    neural:
+      registry_name: "neural-models"
+      auto_promote: false
+    symbolic:
+      dvc_remote: "local"
+      auto_commit: true
+  
+  joint_testing:
+    enabled: true
+    simulation_scenarios:
+      - "medication_safety"
+      - "drug_interaction"
+      - "dosage_verification"
+    drift_gate_threshold: 0.02
+
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: true
+    port: 8001
+    path: "/metrics"
+  
+  grafana:
+    enabled: true
+    dashboards_path: "configs/grafana/dashboards"
+  
+  logging:
+    format: "json"
+    level: "INFO"
+    output: "stdout"
+
+# Cache Configuration
+cache:
+  redis:
+    url: "redis://localhost:6379"
+    default_ttl: 3600  # seconds
+    max_connections: 10
+  
+  local:
+    enabled: true
+    max_size: 1000
+    ttl: 600
