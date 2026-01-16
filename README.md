@@ -114,6 +114,23 @@ print(f"Safe: {result['symbolic_check']['is_safe']}")
 print(f"Confidence: {result['confidence']['grade']}")
 ```
 
+**Sample Output:**
+```
+Response: You should NOT take aspirin with warfarin without consulting your doctor. 
+Both medications affect blood clotting, and combining them significantly increases 
+your risk of bleeding. For headache relief, acetaminophen (Tylenol) is generally 
+safer with warfarin. Please contact your healthcare provider before making changes.
+
+Route: symbolic_first
+Safe: False
+Confidence: B
+
+⚠️ SAFETY ALERT: Drug interaction detected
+   - Warfarin + Aspirin: Major interaction - increased bleeding risk
+   - Risk Level: HIGH
+   - Recommendation: Avoid combination; consider acetaminophen alternative
+```
+
 ### Run with Docker Compose
 
 ```bash
